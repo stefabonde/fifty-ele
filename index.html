@@ -1,133 +1,142 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Per Te ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fifty Elena ❤️</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Montserrat", sans-serif;
-      background: #faf7f2;
-      color: #333;
-      text-align: center;
-      overflow-x: hidden;
-    }
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    overflow-x: hidden;
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      animation: fadeIn 1.2s ease-in-out;
-    }
+    /* Sfondo molto più scuro, profondo e elegante */
+    background: radial-gradient(circle at center,
+      #4b0a16 0%,
+      #2b040a 40%,
+      #130106 70%,
+      #000000 100%
+    );
+  }
 
-    h1 {
-      font-size: 2.4em;
-      color: #b1116b;
-      margin-top: 20px;
-      font-weight: 700;
-    }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    color: white;
+  }
 
-    .main-image {
-      width: 100%;
-      max-width: 850px;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-      margin-top: 25px;
-      animation: pop 0.7s ease-out;
-    }
+  h1 {
+    font-size: 2.6em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffffff, #ffd5dd, #ffb8c6);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards 0.3s;
+  }
 
-    .section {
-      margin-top: 50px;
-      padding: 20px;
-      animation: fadeIn 1.4s ease-in-out;
-    }
+  /* Immagine fullscreen */
+  .main-image-wrapper {
+    margin-top: 25px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-    .section h2 {
-      font-size: 1.8em;
-      color: #b1116b;
-      margin-bottom: 15px;
-    }
+  .main-image {
+    width: 100vw;
+    max-width: 900px;
+    border-radius: 18px;
+    margin: 0 auto;
+    display: block;
 
-    .small-gallery img {
-      width: 30%;
-      margin: 1%;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.2);
-    }
+    /* Glow più forte su sfondo scuro */
+    box-shadow:
+      0 0 40px rgba(255, 80, 120, 0.7),
+      0 0 80px rgba(255, 80, 120, 0.4),
+      0 0 120px rgba(255, 80, 120, 0.2);
 
-    .message {
-      font-size: 1.3em;
-      line-height: 1.6;
-      margin: 20px auto;
-      max-width: 700px;
-    }
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.4s ease forwards 0.5s;
+  }
 
-    footer {
-      margin-top: 60px;
-      padding-bottom: 40px;
-      font-size: 0.9em;
-      color: #666;
-    }
+  .section {
+    margin-top: 60px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+  }
 
-    /* Animazioni */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-    @keyframes pop {
-      0%   { transform: scale(0.95); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-  </style>
+  .section h2 {
+    font-size: 1.9em;
+    background: linear-gradient(90deg, #fff, #ffc9d5);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ffdde5;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
 </head>
 
 <body>
+<div class="container">
 
-  <div class="container">
+<div class="main-image-wrapper">
+  <img class="main-image" src="https://stefabonde.github.io/fifty-ele/test.png" alt="Immagine">
+</div>
 
-    <!-- TITOLO PRINCIPALE -->
-    <h1>❤️ Per Te ❤️</h1>
+<div class="section">
+  <h2>🌟 Buon compleanno Elena!</h2>
+  <p>Ti vogliamo bene ❤️ </p>
+</div>
 
-    <!-- IMMAGINE PRINCIPALE -->
-    <img class="main-image" src="https://stefabonde.github.io/fifty-ele/test.png" alt="Immagine principale" />
-
-    <!-- FRASE ANIMATA O DI PRESENTAZIONE -->
-    <div class="section">
-      <h2>✨ Placeholder Frase ✨</h2>
-      <p class="message">
-        Inserisci qui la tua frase speciale, divertente o significativa.  
-        Questo testo è un placeholder che puoi cambiare liberamente.
-      </p>
-    </div>
-
-    <!-- GALLERIA OPZIONALE -->
-    <div class="section">
-      <h2>📸 Piccola Galleria (opzionale)</h2>
-      <div class="small-gallery">
-        <img src="placeholder1.png" alt="Placeholder 1" />
-        <img src="placeholder2.png" alt="Placeholder 2" />
-        <img src="placeholder3.png" alt="Placeholder 3" />
-      </div>
-    </div>
-
-    <!-- MESSAGGIO FINALE -->
-    <div class="section">
-      <h2>💕 Messaggio Finale (placeholder)</h2>
-      <p class="message">
-        Qui puoi inserire un messaggio conclusivo, un ringraziamento,
-        una frase romantica o un pensiero carino.  
-        Sostituisci questo testo quando vuoi.
-      </p>
-    </div>
-
-    <footer>
-      Made con ❤️ da [Tuo Nome]  
+    <footer style="font-size: 10px;">
+      SB  
     </footer>
+</div>
 
-  </div>
+<script>
+  const sections = document.querySelectorAll('.section');
+
+  function checkScroll() {
+    const trigger = window.innerHeight * 0.8;
+
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < trigger) sec.classList.add('visible');
+    });
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  window.addEventListener('load', checkScroll);
+</script>
 
 </body>
 </html>
